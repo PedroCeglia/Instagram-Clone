@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/menu_search"
+        android:title="Pesquisar"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/menu_postagem"
+        android:title="Postagem"
+        android:icon="@drawable/ic_baseline_photo_camera_24"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/menu_perfil"
+        android:title="Perfil"
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="always"/>
+
+</menu>
