@@ -1,8 +1,5 @@
 package com.example.instagramclone.activitys.loginecadastro;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +8,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.instagramclone.R;
 import com.example.instagramclone.config.ConfiguracaoFirebase;
-import com.example.instagramclone.helper.Base64Custom;
 import com.example.instagramclone.helper.UsuarioFirebase;
 import com.example.instagramclone.models.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.auth.FirebaseUser;
 
 public class CadastroActivity extends AppCompatActivity {
 

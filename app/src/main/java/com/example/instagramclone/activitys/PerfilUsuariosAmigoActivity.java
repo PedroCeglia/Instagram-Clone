@@ -1,9 +1,5 @@
 package com.example.instagramclone.activitys;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,9 +10,12 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.bumptech.glide.Glide;
 import com.example.instagramclone.R;
-import com.example.instagramclone.activitys.listandousuarios.ListaDeUsuariosActivity;
 import com.example.instagramclone.activitys.listandousuarios.ListandoSeguidoresActivity;
 import com.example.instagramclone.activitys.listandousuarios.ListandoSeguindoActivity;
 import com.example.instagramclone.adapter.AdapterGridAmigo;

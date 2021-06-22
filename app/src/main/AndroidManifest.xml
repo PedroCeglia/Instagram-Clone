@@ -18,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramClone">
-        <activity android:name=".activitys.listandousuarios.ListandoSeguidoresActivity"></activity>
+        <activity android:name=".activitys.ChatActivity"></activity>
+        <activity android:name=".activitys.DirectActivity" />
+        <activity android:name=".activitys.listandousuarios.ListandoSeguidoresActivity" />
         <activity android:name=".activitys.listandousuarios.ListandoSeguindoActivity" />
         <activity android:name=".activitys.listandousuarios.ListaDeUsuariosActivity" />
         <activity android:name=".activitys.ComentarioActivity" />

@@ -1,26 +1,21 @@
 package com.example.instagramclone.activitys.listandousuarios;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-
 import com.example.instagramclone.R;
 import com.example.instagramclone.activitys.PerfilUsuariosAmigoActivity;
 import com.example.instagramclone.adapter.AdapterListaUsuarios;
 import com.example.instagramclone.config.ConfiguracaoFirebase;
-import com.example.instagramclone.fragments.PerfilFragment;
 import com.example.instagramclone.helper.RecyclerItemClickListener;
-import com.example.instagramclone.helper.UsuarioFirebase;
-import com.example.instagramclone.models.Postagem;
 import com.example.instagramclone.models.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -6,4 +6,9 @@
         android:title="Sair"
         app:showAsAction="never"/>
 
+    <item android:id="@+id/menu_direct"
+        android:title="Direct"
+        android:icon="@drawable/ic_baseline_send_24"
+        app:showAsAction="always"/>
+
 </menu>

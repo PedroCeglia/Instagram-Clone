@@ -1,13 +1,7 @@
 package com.example.instagramclone.activitys;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,7 +9,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Switch;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.instagramclone.R;
 import com.example.instagramclone.activitys.loginecadastro.LoginActivity;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
 
-    private String[] permissoesNecessarias = new String[]{
+    private final String[] permissoesNecessarias = new String[]{
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA
     };
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -80,10 +81,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_sair :
                 deslogarUsuario();
                 break;
-
+            case R.id.menu_direct :
+                abrirDirect();
+                break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void abrirDirect(){
+        Intent i = new Intent(MainActivity.this, DirectActivity.class);
+        startActivity(i);
     }
 
     public void deslogarUsuario(){
@@ -110,18 +118,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Habilitar a navegação
         habilitarNavegacao(bottomNavigationViewEx);
-
-        /*/ Configurando menu que sera exibido inicialmente
-        Menu menu = bottomNavigationViewEx.getMenu();
-        MenuItem menuItem = menu.getItem(2);
-        menuItem.setCheckable(true);
-         */
     }
 
     // Habilita a navegação dos fragments
     private  void habilitarNavegacao(BottomNavigationViewEx bNEX){
 
         bNEX.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 

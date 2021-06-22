@@ -1,9 +1,5 @@
 package com.example.instagramclone.activitys;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +7,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.example.instagramclone.R;
@@ -33,7 +33,7 @@ public class VisualizandoPostagensActivity extends AppCompatActivity {
 
     // Widgets
     private TextView tvCurtidas, tvNomeusuarioLogado, tvLegenda, tvAbrirComentarios;
-    private ImageView ivPost;
+    private ImageView ivPost, ivComentarios;
     private CircleImageView civFotoDePerfil;
     private LikeButton likeButton;
 
@@ -78,6 +78,24 @@ public class VisualizandoPostagensActivity extends AppCompatActivity {
             }
         });
 
+        tvAbrirComentarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(VisualizandoPostagensActivity.this, ComentarioActivity.class);
+                i.putExtra("idPostagem", idPostagem);
+                startActivity(i);
+            }
+        });
+
+        ivComentarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(VisualizandoPostagensActivity.this, ComentarioActivity.class);
+                i.putExtra("idPostagem", idPostagem);
+                startActivity(i);
+            }
+        });
+
 
     }
 
@@ -91,11 +109,10 @@ public class VisualizandoPostagensActivity extends AppCompatActivity {
         ivPost = findViewById(R.id.ivAdapterPostagemVisualizandoPost);
         civFotoDePerfil = findViewById(R.id.civAdapterFotousuarioLogadoVisuPost);
         likeButton = findViewById(R.id.likeButtonAdapter);
-
+        ivComentarios = findViewById(R.id.ivAdapterComentario);
 
         // Referenciando Instancias do firebase
         database = ConfiguracaoFirebase.getFirebaseDatabase();
-
     }
 
     public void configurandoToolbar(){
